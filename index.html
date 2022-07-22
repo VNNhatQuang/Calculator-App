@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator app</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="icon" href="./assets/img/icon-calc.png">
+
+</head>
+
+
+<body>
+    <div id="main">
+        <div id="calculator">
+            <!-- DISPLAY -->
+            <div id="calc-display">
+                <span>0</span>
+            </div>
+
+            <!-- KEY -->
+            <div id="calc-key">
+                <div id="row-1" class="squeeze">
+                    <button value="0" style="width: 248px;">0</button>
+                    <button value=".">.</button>
+                    <button value="=" name="=">=</button>
+                </div>
+                <div id="row-2" class="squeeze">
+                    <button value="1">1</button>
+                    <button value="2">2</button>
+                    <button value="3">3</button>
+                    <button value=""></button>
+                </div>
+                <div id="row-3" class="squeeze">
+                    <button value="4">4</button>
+                    <button value="5">5</button>
+                    <button value="6">6</button>
+                    <button value="!">!</button>
+                </div>
+                <div id="row-4" class="squeeze">
+                    <button value="7">7</button>
+                    <button value="8">8</button>
+                    <button value="9">9</button>
+                    <button value="3.1415926535" style="font-weight: bolder;">π</button>
+                </div>
+                <div id="row-5" class="squeeze">
+                    <button value="+" class="bgr-red">+</button>
+                    <button value="-" class="bgr-red">-</button>
+                    <button value="x" class="bgr-red">x</button>
+                    <button value="/" class="bgr-red">/</button>
+
+                </div>
+                <div id="row-6" class="squeeze">
+                    <button value="Math.sqrt(">&#8730;</button>
+                    <button value="^">&#8743;</button>
+                    <button value="DEL">DEL</button>
+                    <button value="AC">AC</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/app.js"></script>
+</body>
+
+</html>

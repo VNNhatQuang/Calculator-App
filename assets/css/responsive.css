@@ -1,0 +1,32 @@
+/* TABLET */
+
+@media (min-width: 740px) and (max-width: 1023px) {}
+
+
+/* MOBILE */
+
+@media (max-width: 740px) {
+    /* #calculator {
+        width: 100%;
+        display: grid;
+    } */
+    .squeeze {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    button {
+        width: 100%;
+    }
+    #calc-display {
+        width: 100%;
+    }
+    #calc-key {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    button[name] {
+        width: 49%;
+    }
+}
