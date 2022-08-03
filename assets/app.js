@@ -59,7 +59,7 @@ $(document).ready(function() {
                 // PI - Handle function
                 if (calculation[i] == "π") {
                     firstNumber = "π";
-                    result = 3.1415926535;
+                    result = 3.141592653;
                     break;
                 }
 
@@ -128,7 +128,7 @@ $(document).ready(function() {
 
                             // PI - Handle function
                             if (numbers == "π") {
-                                numbers = "3.1415926535";
+                                numbers = "3.141592653";
                                 i += 1;
                                 j += 1;
                             } else {

@@ -17,7 +17,6 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 44px;
 }
 
 #calculator {
@@ -25,7 +24,7 @@ html {
 }
 
 button {
-    width: 124px;
+    width: 100px;
     cursor: pointer;
     font-size: 24px;
     color: #222222;
@@ -39,8 +38,6 @@ button[value]:hover {
 }
 
 button[name] {
-    font-size: 44px;
-    margin-top: -65.3333333333px;
     background: #f27737;
     color: #ddd;
 }
@@ -51,14 +48,7 @@ button[name]:hover {
 
 .squeeze {
     display: flex;
-    justify-content: center;
 }
-
-
-/* .bgr-red {
-    background: #ff3f42 !important;
-    color: #fff !important;
-} */
 
 
 /* DISPLAY */
@@ -68,20 +58,15 @@ button[name]:hover {
     color: #fff;
     background: #222222;
     text-align: right;
-    padding: 10px 5px 0;
-}
-
-#calc-display>span {
-    text-align: right !important;
+    padding: 7px 5px 5px;
 }
 
 
 /* KEY */
 
 #calc-key {
-    font-size: 24px;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     flex-direction: column-reverse;
     background: grey;
 }
