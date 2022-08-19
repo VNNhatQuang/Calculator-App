@@ -176,7 +176,7 @@ $(document).ready(() => {
                 // console.log("-");
                 break;
             case 106: // *
-                appendDisplay('*');
+                appendDisplay('x');
                 // console.log("*");
                 break;
             case 191: // /
