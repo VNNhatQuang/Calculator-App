@@ -34,7 +34,8 @@ button {
 }
 
 button[value]:hover {
-    background-color: #ddd;
+    /* background-color: #ddd; */
+    opacity: 0.8;
 }
 
 button[name] {
@@ -43,7 +44,8 @@ button[name] {
 }
 
 button[name]:hover {
-    background: #fe5900;
+    /* background: #fe5900; */
+    opacity: 0.8;
 }
 
 .squeeze {
@@ -54,11 +56,13 @@ button[name]:hover {
 /* DISPLAY */
 
 #calc-display {
+    max-width: 400px;
     font-size: 64px;
     color: #fff;
     background: #222222;
     text-align: right;
     padding: 7px 5px 5px;
+    overflow: auto;
 }
 
 
