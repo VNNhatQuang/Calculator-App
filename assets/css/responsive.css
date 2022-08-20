@@ -2,12 +2,12 @@
 
 @media (min-width: 740px) and (max-width: 1023px) {
     html {
-        width: 100%;
-        height: 100%;
+        width: unset;
+        height: unset;
     }
     #main {
-        width: 100%;
-        height: 100%;
+        width: unset;
+        height: unset;
     }
     button[value]:hover {
         opacity: unset;
@@ -28,19 +28,18 @@
 
 @media (max-width: 740px) {
     html {
-        height: 100%;
-        width: 100%;
+        height: unset;
+        width: unset;
     }
     body {
-        text-align: center;
-        width: 100%;
-        height: 100%;
+        text-align: unset;
+        width: unset;
+        height: unset;
         display: inline-block;
     }
     #main {
         width: unset;
         height: unset;
-        /* justify-content: unset; */
     }
     button[value]:hover {
         opacity: unset;

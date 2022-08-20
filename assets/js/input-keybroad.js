@@ -1,4 +1,3 @@
-// import getCalculation from './app';
 $(document).ready(() => {
     var area = document.querySelector("html");
     var display = document.querySelector('#calc-display>span');
@@ -31,7 +30,7 @@ $(document).ready(() => {
     }
 
     // Calculation
-    var calculation = () => {
+    var getCalculation = () => {
         // Declare common variable
         var calculation = display.innerText;
         if (calculation == "=")
@@ -108,7 +107,7 @@ $(document).ready(() => {
         switch (e.which) {
             case 13: // enter
                 appendDisplay("=");
-                calculation();
+                getCalculation();
                 // console.log("=");
                 break;
             case 48: // 0
