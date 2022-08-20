@@ -151,7 +151,7 @@ $(document).ready(() => {
                 // console.log("9");
                 break;
             case 80: // π
-                appendDisplay(3.141592653);
+                appendDisplay("π");
                 // console.log("π");
                 break;
             case 190: // .

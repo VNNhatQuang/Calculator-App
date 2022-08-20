@@ -72,6 +72,18 @@
         width: 100%;
         max-width: none;
     }
+    #calc-display::-webkit-scrollbar {
+        height: 7px;
+        background-color: #F5F5F5;
+    }
+    #calc-display::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #555;
+    }
+    #calc-display::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
     /* KEY */
     #calc-key {
         display: flex;
