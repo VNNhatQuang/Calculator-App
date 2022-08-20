@@ -38,8 +38,9 @@ button[value="AC"] {
     color: #fff;
 }
 
-button[value]:hover {
-    opacity: 0.8;
+button[value="DEL"] {
+    background: #0680d7;
+    color: #fff;
 }
 
 button[value="="] {
@@ -48,6 +49,10 @@ button[value="="] {
 }
 
 button[value="="]:hover {
+    opacity: 0.8;
+}
+
+button[value]:hover {
     opacity: 0.8;
 }
 
