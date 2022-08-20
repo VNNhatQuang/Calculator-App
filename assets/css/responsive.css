@@ -5,20 +5,16 @@
         width: unset;
         height: unset;
     }
-    #main {
-        width: unset;
-        height: unset;
-    }
     button[value]:hover {
         opacity: unset;
     }
-    button[name]:hover {
+    button[value="="]:hover {
         opacity: unset;
     }
     button[value]:active {
         opacity: 0.8;
     }
-    button[name]:active {
+    button[value="="]:active {
         opacity: 0.8;
     }
 }
@@ -27,30 +23,62 @@
 /* MOBILE */
 
 @media (max-width: 740px) {
-    html {
-        height: unset;
-        width: unset;
-    }
-    body {
-        text-align: unset;
-        width: unset;
-        height: unset;
-        display: inline-block;
-    }
     #main {
+        position: unset;
         width: unset;
         height: unset;
+        display: unset;
+        flex-direction: unset;
+        justify-content: unset;
+        align-items: unset;
+        text-align: unset;
+    }
+    #calculator {
+        border: 0.5px solid #ccc;
+    }
+    button {
+        width: calc(100% / 4);
+        cursor: pointer;
+        font-size: 24px;
+        color: #222222;
+        padding: 18px 0;
+        outline: none;
+        border: 0.1px solid #ccc;
+    }
+    button[value="AC"] {
+        width: calc(100%/2);
     }
     button[value]:hover {
-        opacity: unset;
-    }
-    button[name]:hover {
         opacity: unset;
     }
     button[value]:active {
         opacity: 0.8;
     }
-    button[name]:active {
+    button[value="="] {
+        background: #f27737;
+        color: #ddd;
+    }
+    button[value="="]:hover {
+        opacity: unset;
+    }
+    button[value="="]:active {
         opacity: 0.8;
+    }
+    .squeeze {
+        display: flex;
+    }
+    /* DISPLAY */
+    #calc-display {
+        width: 100%;
+        max-width: none;
+    }
+    /* KEY */
+    #calc-key {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column-reverse;
+        background: grey;
+        width: 100%;
+        height: 100%;
     }
 }

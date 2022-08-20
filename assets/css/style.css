@@ -16,7 +16,6 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 #calculator {
@@ -33,18 +32,22 @@ button {
     border: 0.1px solid #ccc;
 }
 
+button[value="AC"] {
+    width: 200px;
+    background: #dc2d3f;
+    color: #fff;
+}
+
 button[value]:hover {
-    /* background-color: #ddd; */
     opacity: 0.8;
 }
 
-button[name] {
+button[value="="] {
     background: #f27737;
     color: #ddd;
 }
 
-button[name]:hover {
-    /* background: #fe5900; */
+button[value="="]:hover {
     opacity: 0.8;
 }
 
@@ -62,6 +65,7 @@ button[name]:hover {
     background: #222222;
     text-align: right;
     padding: 7px 5px 5px;
+    border: 0.5px solid #ccc;
     overflow: auto;
 }
 
