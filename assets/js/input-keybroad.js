@@ -1,120 +1,14 @@
-// import appendDisplay, AC from "./Modules/handle.js";
+import { appendDisplay, AC, DEL, getCalculation } from "./Modules/handle.js";
+
 $(document).ready(() => {
     var area = document.querySelector("html");
     var display = document.querySelector('#calc-display>span');
-
-    // input key
-    var appendDisplay = (value) => {
-        if (display.innerText == "0") {
-            display.innerHTML = "";
-            display.append(value);
-        } else {
-            display.append(value);
-        }
-    }
-
-    // AC
-    var AC = () => {
-        display.innerHTML = "0";
-    }
-
-    // DEL
-    var DEL = () => {
-        var calculation = display.innerText;
-        display.innerHTML = "";
-        for (var i = 0; i < calculation.length - 4; i++) {
-            display.append(calculation[i]);
-        }
-        if (display.innerText == '') {
-            display.innerHTML = "0";
-        }
-    }
-
-    // Calculation
-    var getCalculation = () => {
-        // Declare common variable
-        console.log(`display-innerText: ${display.innerText}`);
-        var calculation = display.innerText;
-        if (calculation == "=")
-            calculation = "0";
-        var result;
-        console.log(`calculator: ${calculation}`);
-
-        // GET FIRST NUMBER
-        var firstNumber = "";
-        for (var i = 0; i < calculation.length; i++) {
-            if (calculation[i] == "+" || calculation[i] == "-" || calculation[i] == "x" || calculation[i] == "/") {
-                if (i == 0) {
-                    firstNumber += calculation[i];
-                    continue;
-                }
-                result = Number.parseFloat(firstNumber);
-                break;
-            }
-
-            // Normal
-            firstNumber += calculation[i];
-
-            // PI - Handle function
-            if (calculation[i] == "π") {
-                firstNumber = "π";
-                result = 3.141592653;
-                break;
-            }
-
-            result = Number.parseFloat(firstNumber);
-        }
-
-        // DO THE MATH
-        var operator;
-        var nextNumber = "";
-
-        for (var i = firstNumber.length; i < calculation.length - 1; i++) {
-
-            // Get operator
-            if (calculation[i] == "+" || calculation[i] == "-" || calculation[i] == "x" || calculation[i] == "/") {
-                operator = calculation[i];
-                // Get next number
-                for (var j = i + 1; j < calculation.length; j++) {
-                    if (calculation[j] == "+" || calculation[j] == "-" || calculation[j] == "x" || calculation[j] == "/" || calculation[j] == "=") {
-
-                        if (nextNumber == "π")
-                            nextNumber = 3.141592653;
-
-                        if (operator == "+")
-                            result += Number.parseFloat(nextNumber);
-                        if (operator == "-")
-                            result -= Number.parseFloat(nextNumber);
-                        if (operator == "x")
-                            result *= Number.parseFloat(nextNumber);
-                        if (operator == "/")
-                            result /= Number.parseFloat(nextNumber);
-
-                        console.log(`nextNumber: ${nextNumber}`);
-                        nextNumber = "";
-                        i = j - 1;
-                        break;
-                    }
-                    nextNumber += calculation[j];
-                }
-            }
-        }
-
-        // SHOW RESULT
-        display.innerText = result;
-        console.log(`result: ${result}`);
-    }
-
-
     area.onkeyup = function(e) {
         // console.log(e.which);
         // console.log(e.shiftKey);
-
         switch (e.which) {
             case 13: // enter
-                console.log(display.innerText);
                 appendDisplay("=");
-
                 getCalculation();
                 // console.log("=");
                 break;
@@ -193,6 +87,4 @@ $(document).ready(() => {
                 break;
         }
     }
-
-
 });

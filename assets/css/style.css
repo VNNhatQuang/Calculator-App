@@ -34,13 +34,10 @@ button {
 
 button[value="AC"] {
     width: 200px;
-    /* background: #dc2d3f; */
-    /* color: #fff; */
 }
 
 button[value="DEL"] {
     background: #dc2d3f;
-    /* background: #0680d7; */
     color: #fff;
 }
 
