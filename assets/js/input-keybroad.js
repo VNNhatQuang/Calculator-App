@@ -1,3 +1,4 @@
+// import appendDisplay, AC from "./Modules/handle.js";
 $(document).ready(() => {
     var area = document.querySelector("html");
     var display = document.querySelector('#calc-display>span');
@@ -21,7 +22,7 @@ $(document).ready(() => {
     var DEL = () => {
         var calculation = display.innerText;
         display.innerHTML = "";
-        for (var i = 0; i < calculation.length - 1; i++) {
+        for (var i = 0; i < calculation.length - 4; i++) {
             display.append(calculation[i]);
         }
         if (display.innerText == '') {
@@ -32,10 +33,12 @@ $(document).ready(() => {
     // Calculation
     var getCalculation = () => {
         // Declare common variable
+        console.log(`display-innerText: ${display.innerText}`);
         var calculation = display.innerText;
         if (calculation == "=")
             calculation = "0";
         var result;
+        console.log(`calculator: ${calculation}`);
 
         // GET FIRST NUMBER
         var firstNumber = "";
@@ -87,6 +90,7 @@ $(document).ready(() => {
                         if (operator == "/")
                             result /= Number.parseFloat(nextNumber);
 
+                        console.log(`nextNumber: ${nextNumber}`);
                         nextNumber = "";
                         i = j - 1;
                         break;
@@ -98,7 +102,9 @@ $(document).ready(() => {
 
         // SHOW RESULT
         display.innerText = result;
+        console.log(`result: ${result}`);
     }
+
 
     area.onkeyup = function(e) {
         // console.log(e.which);
@@ -106,7 +112,9 @@ $(document).ready(() => {
 
         switch (e.which) {
             case 13: // enter
+                console.log(display.innerText);
                 appendDisplay("=");
+
                 getCalculation();
                 // console.log("=");
                 break;
@@ -159,6 +167,7 @@ $(document).ready(() => {
                 // console.log(".");
                 break;
             case 8: // Backspace (DEL)
+                appendDisplay("DEL");
                 DEL();
                 // console.log("DEL");
                 break;
