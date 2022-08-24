@@ -1,3 +1,7 @@
+export var area = document.querySelector("html");
+export var display = document.querySelector('#calc-display>span');
+
+
 // INPUT KEY
 var appendDisplay = (value) => {
     if (document.querySelector('#calc-display>span').innerText == "0") {

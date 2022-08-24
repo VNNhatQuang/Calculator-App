@@ -1,8 +1,8 @@
+import { display } from "./Modules/handle.js";
 import { appendDisplay, AC, DEL, getCalculation } from "./Modules/handle.js";
 
+
 $(document).ready(() => {
-    // Declare Variable
-    var display = document.querySelector('#calc-display>span');
 
     // input button
     $('button').click(function() {
@@ -27,6 +27,6 @@ $(document).ready(() => {
         if (this.getAttribute('value') == "=") {
             getCalculation();
         }
-
     });
+
 });

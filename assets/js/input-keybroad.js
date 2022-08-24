@@ -1,8 +1,9 @@
+import { area, display } from "./Modules/handle.js";
 import { appendDisplay, AC, DEL, getCalculation } from "./Modules/handle.js";
 
+
 $(document).ready(() => {
-    var area = document.querySelector("html");
-    var display = document.querySelector('#calc-display>span');
+
     area.onkeyup = function(e) {
         // console.log(e.which);
         // console.log(e.shiftKey);
@@ -87,4 +88,5 @@ $(document).ready(() => {
                 break;
         }
     }
+
 });
